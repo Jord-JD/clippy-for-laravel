@@ -1,27 +1,33 @@
 {
-    "name": "divineomega/clippy-for-laravel",
-    "description": "Clippy for Laravel",
-    "type": "library",
-    "require": {
-        "laravel/framework": "^5.1||^6.0"
-    },
-    "license": "LGPL-3.0-only",
-    "authors": [
-        {
-            "name": "Jordan Hall",
-            "email": "jordan@hall05.co.uk"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "DivineOmega\\ClippyForLaravel\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "DivineOmega\\ClippyForLaravel\\ClippyForLaravelServiceProvider"
-            ]
-        }
+  "name": "jord-jd/clippy-for-laravel",
+  "description": "Clippy for Laravel",
+  "type": "library",
+  "require": {
+    "laravel/framework": "^5.1||^6.0"
+  },
+  "license": "LGPL-3.0-only",
+  "authors": [
+    {
+      "name": "Jordan Hall",
+      "email": "jordan@hall05.co.uk"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DivineOmega\\ClippyForLaravel\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DivineOmega\\ClippyForLaravel\\ClippyForLaravelServiceProvider"
+      ]
+    },
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    }
+  },
+  "replace": {
+    "jord-jd/clippy-for-laravel": "self.version"
+  }
 }

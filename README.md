@@ -12,7 +12,7 @@ Clippy assistant within their Laravel applications.
 Just run the following Composer command from the root of your project.
 
 ```bash
-composer require divineomega/clippy-for-laravel
+composer require jord-jd/clippy-for-laravel
 ```
 
 ## Usage
