@@ -28,6 +28,6 @@
     }
   },
   "replace": {
-    "jord-jd/clippy-for-laravel": "self.version"
+    "divineomega/clippy-for-laravel": "self.version"
   }
 }
