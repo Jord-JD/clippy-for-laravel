@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\ClippyForLaravel;
+namespace JordJD\ClippyForLaravel;
 
 class Clippy
 {
