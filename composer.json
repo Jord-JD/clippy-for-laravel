@@ -14,17 +14,17 @@
   ],
   "autoload": {
     "psr-4": {
-      "DivineOmega\\ClippyForLaravel\\": "src/"
+      "JordJD\\ClippyForLaravel\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "DivineOmega\\ClippyForLaravel\\ClippyForLaravelServiceProvider"
+        "JordJD\\ClippyForLaravel\\ClippyForLaravelServiceProvider"
       ]
     },
     "branch-alias": {
-      "dev-master": "2.0-dev"
+      "dev-master": "3.0-dev"
     }
   },
   "replace": {
