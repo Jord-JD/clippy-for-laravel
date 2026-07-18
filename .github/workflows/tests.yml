@@ -32,5 +32,7 @@ jobs:
       - run: composer validate --strict
       - run: composer require --no-update "laravel/framework:${{ matrix.laravel }}"
       - run: composer require --dev --no-update "phpunit/phpunit:${{ matrix.phpunit }}"
+      - if: matrix.php == '7.0'
+        run: composer config --no-plugins allow-plugins.kylekatarnls/update-helper false
       - run: composer update --prefer-stable --no-interaction
       - run: vendor/bin/phpunit tests
