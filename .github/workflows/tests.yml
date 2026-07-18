@@ -1,0 +1,38 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - php: '7.0'
+            composer: '2.2'
+            laravel: '5.5.*'
+            phpunit: '^6.5'
+          - php: '8.5'
+            composer: latest
+            laravel: '^13.0'
+            phpunit: '^12.0'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: composer:${{ matrix.composer }}
+          coverage: none
+      - run: composer validate --strict
+      - run: composer require --no-update "laravel/framework:${{ matrix.laravel }}"
+      - run: composer require --dev --no-update "phpunit/phpunit:${{ matrix.phpunit }}"
+      - if: matrix.php == '7.0'
+        run: composer config --no-plugins allow-plugins.kylekatarnls/update-helper false
+      - run: composer update --prefer-stable --no-interaction
+      - run: vendor/bin/phpunit tests

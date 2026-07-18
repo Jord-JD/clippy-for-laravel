@@ -3,7 +3,8 @@
   "description": "Clippy for Laravel",
   "type": "library",
   "require": {
-    "laravel/framework": "^5.1||^6.0"
+    "php": ">=7.0",
+    "laravel/framework": "^5.1||^6.0||^7.0||^8.0||^9.0||^10.0||^11.0||^12.0||^13.0"
   },
   "license": "LGPL-3.0-only",
   "authors": [
@@ -30,5 +31,12 @@
   "replace": {
     "divineomega/clippy-for-laravel": "self.version"
   },
-  "require-dev": {}
+  "autoload-dev": {
+    "psr-4": {
+      "JordJD\\ClippyForLaravel\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5||^9.6||^12.0"
+  }
 }
